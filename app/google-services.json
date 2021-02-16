@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1020320991240",
+    "firebase_url": "https://shoppingswipeapp-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "shoppingswipeapp",
+    "storage_bucket": "shoppingswipeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020320991240:android:261a37e611c65dbcffa9bd",
+        "android_client_info": {
+          "package_name": "com.example.shoppingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020320991240-dqj15achu2kv9omv9ds647k7500ghd1m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoppingapp",
+            "certificate_hash": "01f931f984485d4cde18b4891d898e81b923a94d"
+          }
+        },
+        {
+          "client_id": "1020320991240-p40vqaoghhrgv9k0dvtfjgk9t7tkv5oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHsEYSRYoZzrUK83ECLm1FQnu2wv3JH6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020320991240-p40vqaoghhrgv9k0dvtfjgk9t7tkv5oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
