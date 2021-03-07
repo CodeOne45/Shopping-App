@@ -20,6 +20,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -33,9 +35,10 @@ public class Register extends AppCompatActivity {
     Button uRegisterBtn;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
-    FirebaseFirestore fStrore;
+    DatabaseReference fStrore;
     String userID;
-
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +53,7 @@ public class Register extends AppCompatActivity {
 
         // Connect to DB --> Fire base
         fAuth = FirebaseAuth.getInstance();
-        fStrore = FirebaseFirestore.getInstance();
+        ref = database.getReference();
 
         // User already exist
         if(fAuth.getCurrentUser() != null){
@@ -91,27 +94,15 @@ public class Register extends AppCompatActivity {
                             Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
 
-
+                            DatabaseReference usersRef = ref.child("users");
                             // Create data
                             final Map<String,Object> user = new HashMap<>();
                             user.put("uName", userName);
                             user.put("uEmail", email);
 
                             // Store data to DB
-                            fStrore.collection("users")
-                                    .add(user)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                        @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Log.w(TAG, "Error adding document", e);
-                                        }
-                                    });
+
+                            usersRef.setValue(user);
 
                             // Go to login activity
                             startActivity(new Intent(getApplicationContext(), Login.class));
