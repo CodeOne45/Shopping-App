@@ -16,6 +16,12 @@ Now that you are logged in, you are faced with a categories page. On this page y
 ## Back-end
 ![App Structur](https://github.com/CodeOne45/Shopping-App/blob/appV1.0/resources/backend.JPG?raw=true)
 
+## Usefull links
+
+- Design : https://www.figma.com/file/NZb1MCx7EwLEK2zMRhw5ie/Tinder-shopping?node-id=0%3A1
+
+- API : https://rapidapi.com/b2g.corporation/api/amazon24?endpoint=apiendpoint_a4a61ddc-511e-45e9-bd89-07b0ac9dede9
+
 
 ## Development
 
