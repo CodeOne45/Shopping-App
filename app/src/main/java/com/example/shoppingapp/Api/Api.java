@@ -14,6 +14,6 @@ import retrofit2.http.POST;
 
 public interface Api {
 
-    @GET("category?country=US")
+    @GET("category?country=FR")
     Call<List<CategoryModel>> get_categories();
 }

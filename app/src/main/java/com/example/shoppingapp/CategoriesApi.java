@@ -16,7 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shoppingapp.adapters.CategoryAdapter;
-import com.example.shoppingapp.model.Categories;
 import com.example.shoppingapp.model.CategoryModel;
 import com.example.shoppingapp.model.RetrofitClint;
 import com.example.shoppingapp.model.Utils;
@@ -26,8 +25,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +37,8 @@ import retrofit2.Response;
 
 
 public class CategoriesApi extends AppCompatActivity {
+
+
 
     private EditText search_et;
     private RecyclerView categorie_recycler;
@@ -120,8 +119,6 @@ public class CategoriesApi extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     private void init(){
@@ -155,22 +152,17 @@ public class CategoriesApi extends AppCompatActivity {
 
     }
 
-    public void appiCoonection(){
-        OkHttpClient client = new OkHttpClient();
-
-        Request request = new Request.Builder()
-                .url("https://amazon24.p.rapidapi.com/api/category?country=US")
-                .get()
-                .addHeader("x-rapidapi-key", "fd5a8df027msh0b94b28cfd9f50dp164841jsnf9573aea2221")
-                .addHeader("x-rapidapi-host", "amazon24.p.rapidapi.com")
-                .build();
-
-        //Response response = client.newCall(request).execute();
-    }
 
     public void logout(View view){
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
     }
+
+
+    public void go_toCart(View view){
+        startActivity(new Intent(getApplicationContext(), Cart.class));
+    }
+
+
 }

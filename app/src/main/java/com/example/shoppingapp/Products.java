@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.shoppingapp.model.CategoryModel;
@@ -15,6 +18,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.ArrayList;
 
 import javax.annotation.Nullable;
 
@@ -29,10 +34,12 @@ public class Products extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userId;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+
 
         // User details
         userName = findViewById(R.id.name);
@@ -69,9 +76,8 @@ public class Products extends AppCompatActivity {
         }
 
 
-
-
     }
+
 
     public void logout(View view){
         FirebaseAuth.getInstance().signOut();
