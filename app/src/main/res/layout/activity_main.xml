@@ -1,28 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LandingActivity">
+
 
     <TextView
+        android:id="@+id/App_Slogon"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="89dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Swipe to shop !"
+        android:textAlignment="center"
+        android:textColor="#ADADAD"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/App_Name" />
+
+    <TextView
+        android:id="@+id/App_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Shopping Swipe"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/App_Slogon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LogOut"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="444dp"
-        android:onClick="logout"/>
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="284dp"
+        android:src="@drawable/loading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

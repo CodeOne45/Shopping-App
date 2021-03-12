@@ -46,6 +46,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         final CategoryModel model = data.get(position);
 
+        // Set category name + layout
         holder.name.setText(model.getName());
 
         holder.root.setCardBackgroundColor(context.getResources().getColor(colorList[holder.getAdapterPosition()%colorList.length]));
