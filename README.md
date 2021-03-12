@@ -11,9 +11,10 @@ By opening this e-commerce application, a landing page appears, it acts as a loa
 Now that you are logged in, you are faced with a categories page. On this page you will be able to see the different categories of products. This page links directly to the amazon API. Indeed, the different categories present are the Amazon categories. When you click on one of the categories, the products page is displayed. Thus, this page allows you to switch to the right to put the product in your cart or switch to the left to ignore it (you can also put a dislike or a like on the different products) .This page also uses a the amazon API. The goal of using APIs is to have everything (categories + products) updated in real time. Finally, once your shopping is finished, you can go to the basket page to buy the different favorite product (s).
 
 ## Front-end
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Design layout](https://github.com/CodeOne45/Shopping-App/blob/appV1.0/resources/frontend.JPG?raw=true)
 
 ## Back-end
+![App Structur](https://github.com/CodeOne45/Shopping-App/blob/appV1.0/resources/backend.JPG?raw=true)
 
 
 ## Development
